@@ -37,7 +37,7 @@ SGD with shrinking stepsizes is faster and performs better than SGD with averagi
 
 ### Project Structure 
 
-- `notebook`: This directory contains the `model.py` file, which defines the AlexNet architecture.
+- `Final_Notebook_SGD_Final_Lab.ipynb`: All implementations
 - `assets`: Contains session images readme
 
 ### Build With
