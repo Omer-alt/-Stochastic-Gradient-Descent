@@ -44,6 +44,22 @@ SGD with shrinking stepsizes is faster and performs better than SGD with averagi
 
 **Language:** Python
 
+### Note
+- weight averaging
+$$
+w_{\text{average}}^{(k)} = \frac{(k - \text{start\_averaging}) \cdot w_{\text{average}}^{(k-1)} + w^{(k)}}{k - \text{start\_averaging} + 1}
+$$
+where :
+- $ w_{\text{average}}^{(k)} $ is the averaged weight vector at iteration \( k \),
+- $ w^{(k)} $ is the current weight vector at iteration \( k \),
+- $ \text{start\_averaging} $ is the iteration at which averaging begins
+- $ k $ is the index of the current iteration.
+
+Using this formula presents the following advantages:
+
+**Memory**: The recursive formula only requires storing two weight vectors at a time. This significantly reduces memory usage.
+
+**Computation**: It reduces the computational cost and makes it more efficient in real-time.
 
 ### Run Locally
 
